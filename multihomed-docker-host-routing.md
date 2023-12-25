@@ -5,7 +5,7 @@
 title: Case Diagram
 ---
 graph LR
-    ISPA(("<b>InternetProvider A</b><br>GW: A.A.A.Ga")) <--A.A.A.A/A--> eth0
+    ISPA(("<b>Internet Provider A</b><br>GW: A.A.A.Ga")) <--A.A.A.A/A--> eth0
     subgraph host ["<b>DOCKER HOST.</b> Default GW: B.B.B.Gb"]
         eth0([eth0]) <--> NgA
         subgraph dnet ["Docker bridge network D.D.D.D/D"]
