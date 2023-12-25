@@ -29,7 +29,7 @@ graph LR
     class eth0,eth1 net;
     
 ```
-The Diagram on the top demonstrates some case then the Docker Host should be connected to different ISP's. 
+The Diagram on the top demonstrates some case then the Docker Host should be connected to different ISPs. 
 
 Without some tunning all outgoing traffic will be routed through the default gateway **B.B.B.Gb**. Even if the request comes through **eth0** and is served by **NgA** (or Host's own services), the response will leave the **Host** through **eth1**. The only exception is that when the response destination IP is in the same subnetwork in which the **eth0** is connected (i.e. belongs *A.A.A.A/A*). It's because the **Host's** routing table looks like this:
 ```
