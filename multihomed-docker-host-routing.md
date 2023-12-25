@@ -5,10 +5,10 @@
 title: Case Diagram
 ---
 graph LR
-    ISPA(("<b>Internet Provider A</b><br>GW: A.A.A.Ga")) <--A.A.A.A/A--> eth0
-    subgraph host ["<b>DOCKER HOST.</b> Default GW: B.B.B.Gb"]
+    ISPA(("<b>Internet Provider A</b><br>GW: <i>A.A.A.Ga</i>")) <--"<i>A.A.A.A/A</i>"--> eth0
+    subgraph host ["<b>DOCKER HOST.</b> Default GW: <i>B.B.B.Gb</i>"]
         eth0([eth0]) <--> NgA
-        subgraph dnet ["Docker bridge network D.D.D.D/D"]
+        subgraph dnet ["Docker bridge network <i>D.D.D.D/D</i>"]
             NgA("<b>NgA</b> - nginx<br>exposed on eth0")
             DC("some other<br>containers...")
             NgB("<b>NgB</b> - nginx<br>exposed on eth1")
@@ -19,7 +19,7 @@ graph LR
         
         S("Host's own servises<br>like <b>sshd</b> and etc...")
       end
-    ISPB(("<b>Internet Provider B</b><br>GW: B.B.B.Gb")) <--B.B.B.B/B--> eth1
+    ISPB(("<b>Internet Provider B</b><br>GW: <i>B.B.B.Gb</i>")) <--"<i>B.B.B.B/B</i>"--> eth1
     style dnet fill:#ddd,stroke:#333,font-weigth:bold;
     classDef Isp fill:#66F,color:white;
     classDef Srv fill:#99F;
