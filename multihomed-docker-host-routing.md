@@ -7,7 +7,7 @@ title: Case Diagram
 graph LR
     ISPA(("<b>Internet Provider A</b><br>GW: <i>A.A.A.Ga</i>")) <--"<i>A.A.A.A/A</i>"--> eth0
     subgraph host ["<b>DOCKER HOST.</b> Default GW: <i>B.B.B.Gb</i>"]
-        eth0([eth0]) <--> NgA
+        eth0([eth0<br><i>A.A.A.Ha</i>]) <--> NgA
         subgraph dnet ["Docker bridge network <i>D.D.D.D/D</i>"]
             NgA("<b>NgA</b> - nginx<br>exposed on eth0")
             DC("some other<br>containers...")
@@ -15,7 +15,7 @@ graph LR
             DC <--> NgA
             DC <--> NgB
         end
-        eth1([eth1]) <--> NgB
+        eth1([eth1<br><i>B.B.B.Hb</i>]) <--> NgB
         
         S("Host's own servises<br>like <b>sshd</b> and etc...")
       end
